@@ -1,0 +1,11 @@
+<h1>Courses</h1>
+
+{{#if courses.length}}
+<div class="row">
+    {{#each courses}}
+    {{> card}}
+    {{/each}}
+</div>
+{{else}}
+<p>Empty courses list</p>
+{{/if}}

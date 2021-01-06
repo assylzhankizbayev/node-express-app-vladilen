@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.get('/:id/edit', async (req, res) => {
-    if (!req.query.allow) {
+    if (req.query.allow !== 'true') {
         return res.redirect('/')
     }
 

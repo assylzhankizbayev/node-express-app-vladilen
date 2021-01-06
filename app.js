@@ -2,7 +2,7 @@ const express = require('express')
 const exhbs = require('express-handlebars')
 const homeRoutes = require('./routes/home')
 const coursesRoutes = require('./routes/courses')
-const addCoursesRoutes = require('./routes/add-courses')
+const addCourseRoutes = require('./routes/add-course')
 
 const app = express()
 
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }))
 // routes
 app.use('/', homeRoutes)
 app.use('/courses', coursesRoutes)
-app.use('/add-courses', addCoursesRoutes)
+app.use('/add-course', addCourseRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

@@ -3,7 +3,7 @@ const router = new Router()
 const Course = require('../models/course')
 
 router.get('/', (req, res, next) => {
-    res.render('add-courses', {
+    res.render('course-add', {
         title: 'Add new courses',
         isAddCourses: true
     })
@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     const course = new Course(
-        req.body.name,
+        req.body.title,
         req.body.price,
         req.body.img
     )

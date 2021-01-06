@@ -21,6 +21,12 @@
         {{else}}
         <li><a href="/add-course">Add Course</a></li>
         {{/if}}
+
+        {{#if isCart}}
+        <li class="active"><a href="/cart">Cart</a></li>
+        {{else}}
+        <li><a href="/cart">Cart</a></li>
+        {{/if}}
       </ul>
     </div>
   </div>

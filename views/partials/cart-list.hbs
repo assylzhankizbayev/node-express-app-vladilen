@@ -1,0 +1,29 @@
+<div id="cart-list">
+    <table class="responsive-table striped highlight">
+        <thead>
+            <tr>
+                <th>Course name</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <td>{{ title }}</td>
+                <td>{{ count }}</td>
+                <td>
+                    <button type="button" class="btn btn-small btn-remove" data-id="{{ id }}">Delete</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <p>
+        <strong>
+            Total: <span class="price">{{ price }}</span>
+        </strong>
+    </p>
+</div>

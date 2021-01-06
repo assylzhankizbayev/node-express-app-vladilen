@@ -3,6 +3,8 @@ const exhbs = require('express-handlebars')
 const homeRoutes = require('./routes/home')
 const coursesRoutes = require('./routes/courses')
 const addCourseRoutes = require('./routes/add-course')
+const cartRoutes = require('./routes/cart')
+const path = require('path')
 
 const app = express()
 
@@ -19,7 +21,7 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
 // static folder
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // parser for post/put requests
 app.use(express.urlencoded({ extended: true }))
@@ -28,6 +30,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/', homeRoutes)
 app.use('/courses', coursesRoutes)
 app.use('/add-course', addCourseRoutes)
+app.use('/cart', cartRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

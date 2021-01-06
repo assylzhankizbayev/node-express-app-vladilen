@@ -29,3 +29,15 @@
 .card {
     min-height: 405px;
 }
+
+.card-action {
+    display: flex;
+    align-items: center;
+}
+
+.card-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}

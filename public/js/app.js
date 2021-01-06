@@ -15,7 +15,6 @@ if ($cartList) {
     $cartList.addEventListener('click', event => {
         if (event.target.classList.contains('btn-remove')) {
             const id = event.target.dataset.id 
-            console.log(id)
 
             fetch(`/cart/remove/${id}`, { method: 'delete' })
             .then(res => res.json())
